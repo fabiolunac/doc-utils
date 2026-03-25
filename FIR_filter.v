@@ -3,7 +3,7 @@
 	parameter NB_IN = 10,
 	parameter NB_OUT = 25,
 	parameter NB_W = 10,
-	parameter NUMBER_W = 2
+	parameter NUMBER_W = 5
  )
  (
 	input clk,
@@ -13,7 +13,7 @@
  );
  
 // READ WEIGHTS
-reg [NB_W - 1:0] b [0:NUMBER_W-1];
+reg signed [NB_W - 1:0] b [0:NUMBER_W-1];
 initial begin
     $readmemb("weights.mem", b); // read in binary
 end

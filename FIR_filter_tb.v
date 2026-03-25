@@ -15,7 +15,7 @@ initial begin
 	#3 x = 1;
 	#10 x = 0;
 	
-	#30 $finish;
+	#50 $finish;
 end
 
 always #5 clk = ~clk;
